@@ -16,7 +16,7 @@
             <div class="main__column main__result">
                 <div class="diagram__block">
                     <h2 class="diagram-title">Диаграмма расходов</h2>
-                    <canvas id="diagrama" width="600px" height="300px"></canvas>
+                    <canvas id="diagrama" width="400px" height="300px"></canvas>
 
                 </div>
                 <div class="legend">
@@ -25,6 +25,15 @@
                             <span class="legend__desk">Продукты</span>
                             <span class="legend__prise">2000</span>
                         </li>
+                        <li class="legend__title">
+                            <span class="legend__desk">Напитки</span>
+                            <span class="legend__prise">2000</span>
+                        </li>
+                        <li class="legend__title">
+                            <span class="legend__desk">Развлечения</span>
+                            <span class="legend__prise">2000</span>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -33,13 +42,13 @@
                     <thead>
                         <tr class="purcashes__head">
                             <td class="purcashes__name">
-                                <h3>наименование</h3>
+                                <h3>Наименование</h3>
                             </td>
                             <td class="purcashes__category">
-                                <h3>категория</h3>
+                                <h3>Категория</h3>
                             </td>
                             <td class="purcashes__price">
-                                <h3>цена</h3>
+                                <h3>Цена</h3>
                             </td>
                         </tr>
                     </thead>
@@ -64,7 +73,7 @@
                 </div>
                 <div class="addition__category">
                     <div>Категория</div>
-                    <select class="select">
+                    <select class="select" name="selectCategory" id="">
                         <option>Еда</option>
                         <option>Напитки</option>
                         <option>Развлечения</option>
@@ -74,21 +83,21 @@
             </div>
         </div>
     </div>
-<script src="script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-<script>
-    let ctx = document.querySelector('#diagram').getContext('2d');
-    let diagram = new Chart(ctx, {
-        type: 'doughnut and pie',
-        data: {
-            labels: ['еда', 'продукты', 'развлечения'],
-            datasets: [{
-                data: [тут значения],
-                backgroundColor: ['blue', 'red', 'yellow']
-            }]
-        }
-    })
-</script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script>
+        let ctx = document.querySelector('#diagram').getContext('2d');
+        let diagram = new Chart(ctx, {
+            type: 'doughnut and pie',
+            data: {
+                labels: ['еда', 'продукты', 'развлечения'],
+                datasets: [{
+                    data: [тут значения],
+                    backgroundColor: ['blue', 'red', 'yellow']
+                }]
+            }
+        })
+    </script>
 
 </body>
 

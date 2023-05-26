@@ -8,9 +8,19 @@ let select = document.querySelector('.select');
 
 let tbody = document.querySelector('tbody');
 let close = document.querySelector('close');
+let purcashe = {};
+purcashe.count = 0;
+let purcasheArray = {};
+let categories = document.querySelectorAll('.legend__price');
 
-
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    purcashe.name = form.name.value;
+    purcashe.price = form.price.value;
+    purcashe.category = form.selectCategory.options[form.selectCategory.selectIndex].innerText;
+    console.log(purcashe);
+    purcasheArray.push(purcashe);
+    console.log(purcasheArray);
     tbody.insertAdjacentHTML('beforeEnd',
 
         `<tr class="purcashes__row">
@@ -26,12 +36,16 @@ btn.addEventListener('click', () => {
 })
 
 tbody.addEventListener('click', (evt) => {
-   let target = evt.target;
-   
-   target.closest('tr').remove();
-   
-   }
+    let target = evt.target;
+
+    target.closest('tr').remove();
+
+}
 )
 
+
+let prices = document.querySelectorAll('.legend__price');
+console.log(prices)
+purcashe.count += Number(purcashe.prises);
 
 
