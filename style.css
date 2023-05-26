@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+body {
+    height: 100%;
+}
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.wrapper {
+    height: 100vh;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    color: white;
+    padding: 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.main__result {
+    background-color: gray;
+    text-align: center;
+    color: white;
+    width: 410px;
+    height: 420px;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+.legend {
+    background-color: rgba(0, 0, 0, 0.358);
+}
+
+.purcashes {
+    background-color: gray;
+    color: white;
+    width: 820px;
+    height: 420px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.purcashes__table {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.358);
+    border-radius: 4px;
+}
+
+
+
+.addition {
+    background-color: gray;
+    color: white;
+    width: 350px;
+    height: 420px;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
+input[type=text] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    color: white;
+    border-color: white;
+}
+
+.addition__purshes {
+    margin: 20px;
+
+}
+
+.addition__price {
+    margin: 20px;
+
+}
+
+.addition__category {
+    margin: 20px;
+
+}
+
+.select {
+    height: 30px;
+    width: 100%;
+    border: none;
+    color: rgb(117, 104, 104);
+    margin-top: 5px;
+    border-radius: 3px;
+
+}
+
+.addition__btn {
+    height: 35px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.358);
+    border: none;
+    color: white;
+    margin: 20px;
+    border-radius: 3px;
+
+
+}
+
+.close {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.358);
+    border-radius: 4px;
+}

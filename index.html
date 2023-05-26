@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="title">WALLET</h1>
+        <div class="main">
+            <div class="main__column main__result">
+                <div class="diagram__block">
+                    <h2 class="diagram-title">Диаграмма расходов</h2>
+                    <canvas id="diagrama" width="600px" height="300px"></canvas>
+
+                </div>
+                <div class="legend">
+                    <ul class="legend__list">
+                        <li class="legend__title">
+                            <span class="legend__desk">Продукты</span>
+                            <span class="legend__prise">2000</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main__column purcashes">
+                <table class="purcashes__table">
+                    <thead>
+                        <tr class="purcashes__head">
+                            <td class="purcashes__name">
+                                <h3>наименование</h3>
+                            </td>
+                            <td class="purcashes__category">
+                                <h3>категория</h3>
+                            </td>
+                            <td class="purcashes__price">
+                                <h3>цена</h3>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="purcashes__row">
+                            <td class="purcashes__name"></td>
+                            <td class="purcashes__category"></td>
+                            <td class="purcashes__price"></td>
+                            <td class="purcashes__del"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="main__column addition">
+                <div class="addition__purshes">
+                    <div>Товар:</div>
+                    <input type="text" class="addition__name1">
+                </div>
+                <div class="addition__price">
+                    <div>Цена:</div>
+                    <input type="text" class="addition__name2">
+                </div>
+                <div class="addition__category">
+                    <div>Категория</div>
+                    <select class="select">
+                        <option>Еда</option>
+                        <option>Напитки</option>
+                        <option>Развлечения</option>
+                    </select>
+                </div>
+                <button class="addition__btn">Добавить</button>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+<script>
+    let ctx = document.querySelector('#diagram').getContext('2d');
+    let diagram = new Chart(ctx, {
+        type: 'doughnut and pie',
+        data: {
+            labels: ['еда', 'продукты', 'развлечения'],
+            datasets: [{
+                data: [тут значения],
+                backgroundColor: ['blue', 'red', 'yellow']
+            }]
+        }
+    })
+</script>
+
+</body>
+
+
+</html>
