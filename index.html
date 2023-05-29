@@ -14,24 +14,37 @@
         <h1 class="title">WALLET</h1>
         <div class="main">
             <div class="main__column main__result">
-                <div class="diagram__block">
+                <div class="diagram-block">
                     <h2 class="diagram-title">Диаграмма расходов</h2>
-                    <canvas id="diagrama" width="400px" height="300px"></canvas>
+                    <div class="canvas">
+                        <div class="canvas">
+                            <svg class="chart" width="300" height="300" viewBox="0 0 50 50">
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                                <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                            </svg>
+                        </div>
 
+                    </div>
                 </div>
+
+
+
+
                 <div class="legend">
                     <ul class="legend__list">
                         <li class="legend__title">
-                            <span class="legend__desk">Продукты</span>
-                            <span class="legend__prise">2000</span>
+                            <span class="legend__category">Продукты</span>
+                            <span class="legend__prise">0</span>
                         </li>
                         <li class="legend__title">
-                            <span class="legend__desk">Напитки</span>
-                            <span class="legend__prise">2000</span>
+                            <span class="legend__category">Напитки</span>
+                            <span class="legend__prise">0</span>
                         </li>
                         <li class="legend__title">
-                            <span class="legend__desk">Развлечения</span>
-                            <span class="legend__prise">2000</span>
+                            <span class="legend__category">Развлечения</span>
+                            <span class="legend__prise">0</span>
                         </li>
 
                     </ul>
@@ -52,7 +65,7 @@
                             </td>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tbody">
                         <tr class="purcashes__row">
                             <td class="purcashes__name"></td>
                             <td class="purcashes__category"></td>
@@ -63,42 +76,31 @@
                 </table>
             </div>
             <div class="main__column addition">
-                <div class="addition__purshes">
-                    <div>Товар:</div>
-                    <input type="text" class="addition__name1">
-                </div>
-                <div class="addition__price">
-                    <div>Цена:</div>
-                    <input type="text" class="addition__name2">
-                </div>
-                <div class="addition__category">
-                    <div>Категория</div>
-                    <select class="select" name="selectCategory" id="">
-                        <option>Еда</option>
-                        <option>Напитки</option>
-                        <option>Развлечения</option>
-                    </select>
-                </div>
-                <button class="addition__btn">Добавить</button>
+                <form class="editor__form" name="form">
+                    <div class="editor__form-row">
+                        <p class="editor__form-input-name">Товар:</p>
+                        <input type="text" class="editor__form-input" name="name" placeholder="Наименование">
+                    </div>
+                    <div class="editor__form-row">
+                        <p class="editor__form-input-name">Цена:</p>
+                        <input type="text" class="editor__form-input" name="price" placeholder="0">
+                    </div>
+                    <div class="editor__form-row">
+                        <p class="editor__form-input-name">Категория:</p>
+                        <select name="select-category" id="selectCategory" class="editor__form-input">
+                            <option value="poduct">Продукты</option>
+                            <option value="fastFood">Развлечения</option>
+                            <option value="drinks">Напитки</option>
+                        </select>
+                    </div>
+                    <div class="editor__form-row">
+                        <button class="btn" name="addBtn">Добавить</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <script>
-        let ctx = document.querySelector('#diagram').getContext('2d');
-        let diagram = new Chart(ctx, {
-            type: 'doughnut and pie',
-            data: {
-                labels: ['еда', 'продукты', 'развлечения'],
-                datasets: [{
-                    data: [тут значения],
-                    backgroundColor: ['blue', 'red', 'yellow']
-                }]
-            }
-        })
-    </script>
-
 </body>
 
 
